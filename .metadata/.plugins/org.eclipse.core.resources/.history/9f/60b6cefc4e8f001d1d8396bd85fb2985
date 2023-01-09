@@ -1,0 +1,19 @@
+package com.example.dbs.ibanking.service;
+
+import java.util.List;
+
+import com.example.dbs.ibanking.model.Movies;
+
+public interface MoviesService {
+	
+	Movies getMoviesById(int id);
+
+	void deleteMoviesById(int id);
+
+	Movies updateMoviesNameById(int id, String name);
+
+	Movies createNewMovies(String name, String genere, int year, int minutes);
+	
+	List<Movies> getAllMovies();
+
+}

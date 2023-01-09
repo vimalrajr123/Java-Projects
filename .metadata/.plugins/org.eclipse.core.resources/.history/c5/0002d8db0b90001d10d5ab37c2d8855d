@@ -1,0 +1,23 @@
+package com.example.dbs.ibanking.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.dbs.ibanking.helper.IbankHelper;
+
+@Configuration
+public class IbankConfig {
+	
+	@Bean
+	public RestTemplate restTemplate() {
+	    return new RestTemplate();
+	}
+	
+//	@Bean
+//	public IbankHelper ibankHelper() {
+//	    return new IbankHelper();
+//	}
+	
+
+}

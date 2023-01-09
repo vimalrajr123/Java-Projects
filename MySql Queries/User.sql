@@ -1,0 +1,1 @@
+SELECT * FROM dbs_schema.User;

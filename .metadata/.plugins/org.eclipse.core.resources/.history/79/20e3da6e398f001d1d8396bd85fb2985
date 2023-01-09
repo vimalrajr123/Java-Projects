@@ -1,0 +1,47 @@
+package com.example.dbs.ibanking.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.example.dbs.ibanking.model.Movies;
+import com.example.dbs.ibanking.repository.MoviesRepository;
+import com.example.dbs.ibanking.service.MoviesService;
+
+
+public class MoviesServiceImpl implements MoviesService {
+
+	@Override
+	public Movies getUserById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUserById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Movies updateUserNameById(int id, String Name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Movies createNewUser(String name, String designation, int salary, int age) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Movies> getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	}

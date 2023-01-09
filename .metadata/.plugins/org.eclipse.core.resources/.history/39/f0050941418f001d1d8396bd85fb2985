@@ -1,0 +1,64 @@
+package com.example.dbs.ibanking.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
+
+
+public class MoviesDTO {
+	
+	private String name;
+	private String genere;
+	private int year;
+	private int minutes;
+
+//	public MoviesDTO(String name, String genere, int year, int minutes) {
+//		this.name = name;
+//		this.genere = genere;
+//		this.year = year;
+//		this.minutes = minutes;
+//	}
+//
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//
+//	public String getGenere() {
+//		return genere;
+//	}
+//
+//	public void setGenere(String genere) {
+//		this.genere = genere;
+//	}
+//
+//	public int getYear() {
+//		return year;
+//	}
+//
+//	public void setYear(int year) {
+//		this.year = year;
+//	}
+//
+//	public int getMinutes() {
+//		return minutes;
+//	}
+//
+//	public void setMinutes(int minutes) {
+//		this.minutes = minutes;
+//	}
+//	
+	
+	
+	
+	
+
+}

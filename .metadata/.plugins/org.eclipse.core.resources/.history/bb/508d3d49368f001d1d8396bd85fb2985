@@ -1,0 +1,32 @@
+package com.example.dbs.ibanking.helper;
+
+import org.springframework.stereotype.Component;
+
+import com.example.dbs.ibanking.model.CommonResponse;
+
+@Component
+public class IbankHelper {
+	
+	
+	
+	public CommonResponse getUserResponseDetails(int code, String desc, Object user) {
+		
+		CommonResponse userResponse = new CommonResponse();
+		userResponse.setCode(code);
+		userResponse.setDesc(desc);
+		userResponse.setUser(user);
+		return userResponse;
+		
+	}
+	
+	public CommonResponse getMoviesResponseDetails(int code, String desc, Object movies) {
+		
+		CommonResponse moviesResponse = new CommonResponse();
+		userResponse.setCode(code);
+		userResponse.setDesc(desc);
+		userResponse.setUser(movies);
+		return userResponse;
+		
+	}
+
+}

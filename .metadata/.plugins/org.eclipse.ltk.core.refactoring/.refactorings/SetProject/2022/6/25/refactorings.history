@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;collectionProject/src/collectionProject&apos;&#x0A;- Original project: &apos;SetProject&apos;&#x0A;- Destination element: &apos;collectionProject/src/collectionProject&apos;&#x0A;- Original elements:&#x0A;     SetClass.java&#x0A;     MapClass.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="=collectionProject/src&lt;collectionProject" element1="/src&lt;{SetClass.java" element2="/src&lt;{MapClass.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1655124863924" units="2" version="1.0"/>
+</session>
