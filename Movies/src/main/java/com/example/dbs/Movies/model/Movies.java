@@ -14,6 +14,7 @@ import lombok.Data;
 @Data  //getter and setters
 //@AllArgsConstructor //one constructor with all arguments
 //@RequiredArgsConstructor  //one constructor with set of argumentsNoArgsConstructor  //default constructor 
+//@Builder same usage like Data 
 @Entity //DAO class
 @Table(name="Movies")
 public class Movies {
