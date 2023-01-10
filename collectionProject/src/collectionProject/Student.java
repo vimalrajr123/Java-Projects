@@ -1,11 +1,12 @@
 package collectionProject;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Student {
+public class Student implements Serializable {
 	
-	
-	private int id;
+	public static final long serialVersionUID = 42L;
+	transient private int id;
 	private String name;
 	private int age;
 	private int salary;
@@ -17,9 +18,6 @@ public class Student {
 		this.salary = salary;
 	}
 
-	public int getId() {
-		return id;
-	}
 	@Override
 	public int hashCode() {
 		return Objects.hash(age, id, name, salary);
@@ -37,31 +35,43 @@ public class Student {
 		return age == other.age && id == other.id && Objects.equals(name, other.name) && salary == other.salary;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	public int getSalary() {
-		return salary;
-	}
-	public void setSalary(int salary) {
-		this.salary = salary;
-	}
-
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", age=" + age + ", salary=" + salary + "]";
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	
+	
 
 }
