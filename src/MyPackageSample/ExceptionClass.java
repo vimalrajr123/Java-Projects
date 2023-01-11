@@ -1,26 +1,58 @@
 package MyPackageSample;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.IOException;
+
+
+
+class M{  
+	 	void method()throws IOException{  
+	 		throw new IOException("device error");  
+	 	}  
+}  
+
 
 public class ExceptionClass {
 
-	public static void main(String[] args) throws FileNotFoundException {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws IOException  {
+		// Throws always has unchecked Exceptions only like IOException, FileNotFoundException, SQLException
 		
-		FileInputStream f = new FileInputStream("");
 		int x=10;
 		
+		// M class is at at the top
+	    try{  
+		     M m=new M();  
+		     m.method();  
+		    }
+	    catch(Exception e)
+	    	{
+	    		System.out.println(e);
+	    	}     
+		    System.out.println("normal flow...");  
+
 		try {
-			System.out.println(x/0);
+			//System.out.println(x/0);
+			throw new UserDefinedException("My New exception");
 		}
-		catch(ArithmeticException e) {
-			System.out.println("Exception occured"+e);
+		
+		catch(UserDefinedException s) {
+			System.out.println(s);
 		}
-		catch(Exception e) {
-			System.out.println("Exception occured"+e);
+		
+
+//		catch(ArithmeticException e) {
+//			System.out.println("Exception occured"+e);
+//		}
+//		//parent exception should always at the bottom
+//		catch(Exception e) {
+//			System.out.println("Exception occured"+e);
+//		}
+		
+		finally {
+			System.out.println("finally block always run regardless of exception or not");
 		}
+
 
 	}
 
 }
+
