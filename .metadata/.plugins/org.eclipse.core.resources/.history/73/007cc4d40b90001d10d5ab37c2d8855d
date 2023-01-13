@@ -1,5 +1,0 @@
-package com.example.dbs.ibanking.swaggerconfig;
-
-public class SpringFoxConfig {
-
-}

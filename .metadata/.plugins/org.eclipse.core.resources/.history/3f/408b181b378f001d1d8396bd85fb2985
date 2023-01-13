@@ -1,5 +1,0 @@
-package com.example.dbs.ibanking.service;
-
-public interface MoviesService {
-
-}

@@ -1,8 +1,0 @@
-package com.example.dbs.ibanking.config;
-
-public class Snippet {
-	public static void main(String[] args) {
-		SpringFoxConfig
-	}
-}
-
