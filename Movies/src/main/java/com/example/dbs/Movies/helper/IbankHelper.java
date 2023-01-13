@@ -14,7 +14,7 @@ public class IbankHelper {
 		CommonResponse commonResponseDetails = new CommonResponse();
 		commonResponseDetails.setCode(code);
 		commonResponseDetails.setDesc(desc);
-		commonResponseDetails.setUser(obj);
+		commonResponseDetails.setObj(obj);
 		return commonResponseDetails;
 		
 	}

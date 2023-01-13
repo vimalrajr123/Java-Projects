@@ -1,5 +1,8 @@
 package com.example.dbs.Movies.model;
 
+
+import lombok.Data;
+
 public class CommonResponse {
 	
 	//DTO class
@@ -19,10 +22,10 @@ public class CommonResponse {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	public Object getUser() {
+	public Object getObj() {
 		return obj;
 	}
-	public void setUser(Object obj) {
+	public void setObj(Object obj) {
 		this.obj = obj;
 	}
 	
