@@ -4,15 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.Users.model.CommonResponse;
 import com.example.Users.model.Users;
 import com.example.Users.service.UserService;
+
+import lombok.extern.slf4j.Slf4j;
+
 import com.example.Users.repository.UsersRepository;
 
-
+@Slf4j
+@Service
 public class UsersServiceImpl implements UserService {
 
 	@Autowired
 	UsersRepository usersRespository;
+	
+	@Value("${app.baseUrl}")
+	String url;
+	
+	RestTemplate restTemplate = new RestTemplate();
 	
 	@Override
 	public List<Users> getAllUsers() {
@@ -23,7 +38,7 @@ public class UsersServiceImpl implements UserService {
 	}
 
 	@Override
-	public Users getUserById(int id) {
+	public Users getUsersById(int id) {
 		Optional<Users> user = usersRespository.findById(id);
 		if(user.isEmpty()) {
 			return null;
@@ -40,7 +55,7 @@ public class UsersServiceImpl implements UserService {
 	}
 
 	@Override
-	public Users updateUserNameById(int id, String name) {
+	public Users updateUsersNameById(int id, String name) {
 		Optional<Users> user = usersRespository.findById(id);
 		Users userDetails = user.get();
 		userDetails.setName(name);
@@ -58,6 +73,14 @@ public class UsersServiceImpl implements UserService {
 		Users result = usersRespository.save(user);
 		
 		return result;
+	}
+
+	@Override
+	public CommonResponse getMoviesByIdFromIbank(int id) {
+		CommonResponse commonResponse;
+		ResponseEntity<CommonResponse> responseEntity = restTemplate.getForEntity(url+"/getMoviesById/{id}", CommonResponse.class);
+		commonResponse = responseEntity.getBody();
+		return commonResponse;
 	}
 	
 	

@@ -4,9 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.example.Users.model.Users;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages={"com.example.Users"})
 @EnableJpaRepositories
 public class UsersApplication {
 

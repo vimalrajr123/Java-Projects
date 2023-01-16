@@ -36,7 +36,7 @@ public class MoviesController {
 	
 	//@RequestMapping(value= "/getMoviesById/{id}",method=RequestMethod.GET,consumes ="application/json",produces = "application/json")
 	@GetMapping("/getMoviesById/{id}")
-	//@ResponseBody
+	//@ResponseBody   //if @Controller has been used
 	public ResponseEntity<CommonResponse> getMoivesById(@PathVariable int id) {
 		
 		CommonResponse moviesResponse ; 
