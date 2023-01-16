@@ -15,9 +15,6 @@ public class ExceptionClass {
 
 	public static void main(String[] args) throws IOException  {
 		// Throws always has unchecked Exceptions only like IOException, FileNotFoundException, SQLException
-		
-		int x=10;
-		
 		// M class is at at the top
 	    try{  
 		     M m=new M();  

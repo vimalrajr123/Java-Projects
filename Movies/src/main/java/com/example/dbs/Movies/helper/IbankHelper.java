@@ -9,12 +9,12 @@ public class IbankHelper {
 	
 	
 	
-	public CommonResponse getResponseDetails(int code, String desc, Object obj) {
+	public CommonResponse getResponseDetails(int code, String desc, Object data) {
 		
 		CommonResponse commonResponseDetails = new CommonResponse();
 		commonResponseDetails.setCode(code);
 		commonResponseDetails.setDesc(desc);
-		commonResponseDetails.setObj(obj);
+		commonResponseDetails.setData(data);
 		return commonResponseDetails;
 		
 	}

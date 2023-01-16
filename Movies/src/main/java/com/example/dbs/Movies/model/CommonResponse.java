@@ -1,14 +1,11 @@
 package com.example.dbs.Movies.model;
 
-
-import lombok.Data;
-
 public class CommonResponse {
 	
 	//DTO class
 	private int code;
 	private String desc;
-	private Object obj;
+	private Object data;
 	
 	public int getCode() {
 		return code;
@@ -22,11 +19,11 @@ public class CommonResponse {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	public Object getObj() {
-		return obj;
+	public Object getData() {
+		return data;
 	}
-	public void setObj(Object obj) {
-		this.obj = obj;
+	public void setData(Object data) {
+		this.data = data;
 	}
 	
 	

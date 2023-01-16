@@ -39,11 +39,14 @@ public class UsersServiceImpl implements UserService {
 
 	@Override
 	public Users getUsersById(int id) {
+		log.info("Inside IMPL getUsersById :: with Id "+id);
 		Optional<Users> user = usersRespository.findById(id);
+		log.info("after findById repository call :: user output:"+user);
 		if(user.isEmpty()) {
 			return null;
 		}
 		Users result = user.get();
+		log.info("after fetching the record::Users -"+result);
 		return result;
 	}
 
@@ -56,11 +59,14 @@ public class UsersServiceImpl implements UserService {
 
 	@Override
 	public Users updateUsersNameById(int id, String name) {
+		log.info("Inside IMPL updateUsersNameById :: with Id = {} and Name = {}",id,name);
 		Optional<Users> user = usersRespository.findById(id);
+		log.info("after findById repository call :: user output:"+user);
 		Users userDetails = user.get();
 		userDetails.setName(name);
 
 		Users result = usersRespository.save(userDetails);
+		log.info("after updating record :: result output:"+result);
 		return result;
 		
 

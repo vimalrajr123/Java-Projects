@@ -19,7 +19,9 @@ import com.example.Users.model.Users;
 import com.example.Users.model.UsersDTO;
 import com.example.Users.service.UserService;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 @RequestMapping("/users")
 public class UsersController {
@@ -35,16 +37,18 @@ public class UsersController {
 	//@ResponseBody   //if @Controller has been used
 	@GetMapping("/getUsersById/{id}")
 	public ResponseEntity<CommonResponse> getUsersById(@PathVariable int id){
+		log.info("Inside getUsersById :: with Id"+id);
 		CommonResponse usersResponse ; 
-		
 		Users users = userService.getUsersById(id);
 		if(users==null){
 			//runtime exception  
 			usersResponse = ibankHelper.getResponseDetails(404, "Users not found", users);
+			log.info("Final response for null user :: response"+usersResponse);
 			return new ResponseEntity<CommonResponse>(usersResponse, HttpStatus.NOT_FOUND);
 			}  
 		
 		usersResponse = ibankHelper.getResponseDetails(200, "Users retrieved successfully", users);
+		log.info("Final response for user :: response"+usersResponse);
 		return new ResponseEntity<CommonResponse>(usersResponse, HttpStatus.OK);
 	}
 	
@@ -72,6 +76,7 @@ public class UsersController {
 	
 	@PostMapping("/updateUsersNameById/{id}/{name}")
 	public ResponseEntity<CommonResponse> updateUsersNameById(@PathVariable int id, @PathVariable String name){
+		log.info("Inside updateUsersNameById :: with Id = {} and Name = {}",id,name);
 		CommonResponse usersResponse; 
 		Users users = userService.updateUsersNameById(id, name);
 		usersResponse = ibankHelper.getResponseDetails(200, "users updated successfully", users);
@@ -80,6 +85,7 @@ public class UsersController {
 	
 	@PutMapping("/createNewUsers")
 	public ResponseEntity<CommonResponse> createNewUsers(@RequestBody UsersDTO usersDTO){
+		log.info("Inside createNewUsers :: with userDTO object"+usersDTO);
 		CommonResponse usersResponse; 
 		Users users = userService.createNewUsers(usersDTO.getName(),usersDTO.getDesignation(),
 				usersDTO.getSalary(),usersDTO.getAge());

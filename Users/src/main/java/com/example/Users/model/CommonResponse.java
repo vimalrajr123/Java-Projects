@@ -7,6 +7,6 @@ public class CommonResponse {
 	
 	private int code;
 	private String desc;
-	private Object obj;
+	private Object data;
 	
 }
