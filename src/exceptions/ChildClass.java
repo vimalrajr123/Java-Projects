@@ -4,18 +4,17 @@ import java.io.*;
 
 public class ChildClass extends ParentClass {
 	
-	void msg()  {    
+	void msg() throws ArithmeticException {    
 		    System.out.println("child method");    
 		  }  
 	
-	public static void main(String args[])throws IOException{//declare exception 
+	public static void main(String args[]){//declare exception 
 		
-		ChildClass c = new ChildClass();
-		c.msg();
+		ParentClass p = new ChildClass();
+		   try {    
+			   p.msg();    
+			   }  
+			   catch(Exception e) {}    
+			  }    
 	}
-	
-	
-	
-	
 
-}
