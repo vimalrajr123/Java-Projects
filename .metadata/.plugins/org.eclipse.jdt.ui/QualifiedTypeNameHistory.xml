@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="springfox.documentation.builders.RequestHandlerSelectors"/>
-    <fullyQualifiedTypeName name="springfox.documentation.builders.PathSelectors"/>
-    <fullyQualifiedTypeName name="io.swagger.v3.oas.models.OpenAPI"/>
-    <fullyQualifiedTypeName name="io.swagger.models.Info"/>
-    <fullyQualifiedTypeName name="io.swagger.v3.oas.models.info.Info"/>
-    <fullyQualifiedTypeName name="io.swagger.v3.oas.models.info.License"/>
-    <fullyQualifiedTypeName name="springfox.documentation.swagger2.annotations.EnableSwagger2"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.web.servlet.support.SpringBootServletInitializer"/>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
     <fullyQualifiedTypeName name="collectionProject.Student"/>
     <fullyQualifiedTypeName name="lombok.Builder"/>
@@ -29,11 +17,9 @@
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.example.Users.model.Users"/>
     <fullyQualifiedTypeName name="com.example.Users.repository.UserRepository"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
@@ -60,4 +46,18 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="StaticDemo.Demo"/>
+    <fullyQualifiedTypeName name="StaticDemo.WithoutStatic"/>
+    <fullyQualifiedTypeName name="StaticDemo.Student"/>
+    <fullyQualifiedTypeName name="StaticDemo.StudentWithStaticMethod"/>
+    <fullyQualifiedTypeName name="StaticDemo.StaticBlock"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="lambda.LamdaStudent"/>
 </qualifiedTypeNameHistroy>
