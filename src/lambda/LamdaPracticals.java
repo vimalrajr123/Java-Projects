@@ -28,43 +28,21 @@ public class LamdaPracticals {
 		System.out.println("namesList : "+namesList);
 		
 		
-		
-		
-		
 		Set<Integer> keysSets = map.keySet()
 										.stream()
 										.filter(s -> s>2)
 										.collect(Collectors.toSet());
+		
+		System.out.println("Keys set : "+keysSets);
 	
 		
-		System.out.println("keysSets:"+keysSets);
+		Set<LamdaStudent> setRecord = map.entrySet()
+										.stream()
+										.filter(s -> s.getKey()>2)
+										.map(t -> t.getValue())
+										.collect(Collectors.toSet());
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-											
+		System.out.println("Value set : "+setRecord);
 		
 		
 
