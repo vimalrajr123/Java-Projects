@@ -1,5 +1,6 @@
 package collectionProject;
 
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class LinkedListClass {
@@ -8,8 +9,13 @@ public class LinkedListClass {
 		LinkedList<String> countries = new LinkedList<>();
 		countries.add("india");
 		countries.add("singapore");
-		countries.add("UAE");
+		countries.add("uae");
 		countries.add("germany");
+		
+		Collections.sort(countries);
+		System.out.println("sortedCountries: "+countries);
+		
+		
 		//anonymous Object
 		new LinkedListClass().printList(countries);
 		countries.add(1,"USA");
