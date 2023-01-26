@@ -1,0 +1,10 @@
+functional interface
+	
+	method - override in class -static map(Integer, Student)
+		1>age > 35 ->names sort in desc
+		2>salary >70000 -> desgination = lead -> return as map
+	method - override in class -non static map(Integer, Student)
+		1> normal method designation except lead or manager -> names -> accending 
+		2> age<14 -> map -> but key should be age, value name
+	student - id , name, age, salary , designation
+	
