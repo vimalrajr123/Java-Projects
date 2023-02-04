@@ -10,6 +10,11 @@ public class SingletonPattern {
 	// eager instantiation which creates the instatnce when the Jvm run, 
 	//if this singleton object consumes more memory then its a wastage. prefer to use Lazy instantiation.
 	//private static PracticalSingleton ps = new PracticalSingleton();
+	
+	//keeping static in variable, for memory management only one reference in class memory 
+	//if its not assigned it will be null once its assigned  it will overwriting the value
+	//and keeping as private it can be accessed within the class only. so it cannot be accessed anywhere.
+	
 	private static SingletonPattern ps;
 	
 	//making the constructor Private. so "new" keyword cannot be used to create the Instance
@@ -38,10 +43,6 @@ public class SingletonPattern {
 //				}
 //			}	
 //		}
-		
-		
-		
-		
 		
 		return ps;
 	}

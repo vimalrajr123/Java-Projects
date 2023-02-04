@@ -1,0 +1,5 @@
+SOLID Principles Java
+
+https://javatechonline.com/solid-principles-the-open-closed-principle/
+https://javatechonline.com/solid-principles-the-liskov-substitution-principle/
+https://www.javatpoint.com/solid-principles-java
