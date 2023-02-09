@@ -74,7 +74,7 @@ public class UsersController {
 		return null;
 		}
 	
-	@PostMapping("/updateUsersNameById/{id}/{name}")
+	@PutMapping("/updateUsersNameById/{id}/{name}")
 	public ResponseEntity<CommonResponse> updateUsersNameById(@PathVariable int id, @PathVariable String name){
 		log.info("Inside updateUsersNameById :: with Id = {} and Name = {}",id,name);
 		CommonResponse usersResponse; 
@@ -83,7 +83,7 @@ public class UsersController {
 		return new ResponseEntity<CommonResponse>(usersResponse, HttpStatus.OK);
 	}
 	
-	@PutMapping("/createNewUsers")
+	@PostMapping("/createNewUsers")
 	public ResponseEntity<CommonResponse> createNewUsers(@RequestBody UsersDTO usersDTO){
 		log.info("Inside createNewUsers :: with userDTO object"+usersDTO);
 		CommonResponse usersResponse; 

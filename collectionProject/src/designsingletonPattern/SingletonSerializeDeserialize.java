@@ -16,6 +16,10 @@ public class SingletonSerializeDeserialize implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private static SingletonSerializeDeserialize ps ;
 	
+	//Eager instantiation******************************
+	//private static SingletonSerializeDeserialize ps =  new SingletonSerializeDeserialize();  
+	
+	
 	private SingletonSerializeDeserialize() {
 		System.out.println("Instance Created");
 		
@@ -26,7 +30,7 @@ public class SingletonSerializeDeserialize implements Serializable{
 	}
 
 	public static SingletonSerializeDeserialize getobj() {
-		//Lazy instantiation
+		//Lazy instantiation******************************
 		if(ps==null)
 		{
 			ps= new SingletonSerializeDeserialize();

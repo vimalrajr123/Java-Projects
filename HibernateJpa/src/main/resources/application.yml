@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/dbs_schema
+    password: Happy@123
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: 'true'
+server:
+  port: '8087'
+  servlet:
+    context-path: /hibernatejpa

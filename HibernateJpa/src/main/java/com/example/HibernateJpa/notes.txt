@@ -1,0 +1,44 @@
+https://www.youtube.com/watch?v=Wurax183_f8&list=PLk5uqoTfn5MF7aWbtFtGGOwBk06fb3aV8&ab_channel=nooble
+
+https://dzone.com/articles/hibernate-mapping
+
+
+
+2. What Is Cascading?
+Entity relationships often depend on the existence of another entity, 
+for example the Person–Address relationship. Without the Person, 
+the Address entity doesn't have any meaning of its own. When we delete the Person entity, 
+our Address entity should also get deleted.
+
+Cascading is the way to achieve this. When we perform some action on the target entity, 
+the same action will be applied to the associated entity.
+
+2.1. JPA Cascade Type
+All JPA-specific cascade operations are represented by the javax.persistence.CascadeType enum containing entries:
+
+ALL
+PERSIST
+MERGE
+REMOVE
+REFRESH
+DETACH
+
+3.1. CascadeType.ALL
+CascadeType.ALL propagates all operations — including Hibernate-specific ones — from a parent to a child entity.
+
+3.2. CascadeType.PERSIST
+The persist operation makes a transient instance persistent. Cascade Type PERSIST propagates the persist operation 
+from a parent to a child entity. 
+When we save the person entity, the address entity will also get saved.
+
+3.3. CascadeType.MERGE
+The merge operation copies the state of the given object onto the persistent object with the same identifier. 
+CascadeType.MERGE propagates the merge operation from a parent to a child entity.
+
+3.4. CascadeType.REMOVE
+As the name suggests, 
+the remove operation removes the row corresponding to the entity from the database and also from the persistent context.
+
+3.5. CascadeType.DETACH
+The detach operation removes the entity from the persistent context. When we use CascadeType.DETACH, 
+the child entity will also get removed from the persistent context.
