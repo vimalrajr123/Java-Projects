@@ -11,7 +11,7 @@ import com.example.HibernateJpa.helper.CommonHelper;
 import com.example.HibernateJpa.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
 import com.example.HibernateJpa.model.CommonResponse;
-import com.example.HibernateJpa.model.Student;
+import com.example.HibernateJpa.model.onetoone.Student;
 
 
 @Slf4j
