@@ -59,4 +59,11 @@ public class Person {
 	public Person() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "Person [personId=" + personId + ", personName=" + personName + ", age=" + age + ", mobileList="
+				+ mobileList + "]";
+	}
+	
+	
 }

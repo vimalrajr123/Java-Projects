@@ -1,16 +1,23 @@
 package com.example.HibernateJpa.model.onetomany;
 
-import lombok.AllArgsConstructor;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @Data
-@AllArgsConstructor
-@RequiredArgsConstructor
-public class PersonDTO {
+@ToString
+public class PersonDTO implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int personId;
 	private String personName;
 	private int age;
+	private List<MobileDTO> mobileDTOList;
 	
 }

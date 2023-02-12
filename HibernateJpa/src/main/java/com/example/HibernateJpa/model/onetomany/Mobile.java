@@ -40,6 +40,11 @@ public class Mobile {
 	public void setNumber(int number) {
 		Number = number;
 	}
+
+	@Override
+	public String toString() {
+		return "Mobile [MobileId=" + MobileId + ", Model=" + Model + ", Number=" + Number + "]";
+	}
 	
 	
 	
