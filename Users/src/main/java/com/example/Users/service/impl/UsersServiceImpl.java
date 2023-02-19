@@ -27,7 +27,8 @@ public class UsersServiceImpl implements UserService {
 	@Value("${app.baseUrl}")
 	String url;
 	
-	RestTemplate restTemplate = new RestTemplate();
+	@Autowired
+	RestTemplate restTemplate;
 	
 	@Override
 	public List<Users> getAllUsers() {
