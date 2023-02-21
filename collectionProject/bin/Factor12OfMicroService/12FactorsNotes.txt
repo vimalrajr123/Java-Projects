@@ -1,0 +1,58 @@
+https://12factor.net/
+
+I. Codebase (One codebase tracked in revision control, many deploys)
+One codebase tracked in revision control, many deploys ||  application can have multiple micro service , 
+so each micro service should have separate code repository. So the change won’t impact others we can separately build and 
+deploy that service.
+
+II. Dependencies  (Explicitly declare and isolate dependencies)
+There will be lot of dependencies for application. Better Explicitly declare and isolate dependencies in pom.xml package.
+Json, gradle instead  of bundle with the application itself 
+So all systems and environments will have the same versions of dependencies and same dependencies.
+
+III. Configuration (Store configuration in the environment)
+Application will have many configuration in application.property file or Yaml file (its been hardcoded). 
+each environments configuration will differ. Instead of storing it in the application,  Stores the 
+configuration in the environment and make use it in the Yaml or application.properties file. Eg Dyname, username, password 
+
+IV. Backing services
+Treat backing services as attached resources (backing service like DB, SMTP)it should depend on the backing service. 
+These backing service should be like easily attached and detached. Eg DB should be connected through URL. 
+Incase if the DB crashes then change the DB URL to connect to new DB. 
+
+V. Build, release, run (pipeline split)
+Strictly separate build and run stages. Build, Release and Run Stages should be separated. 
+Once build is success the jar file should be used in release to create the image and later execute in Run .
+reason to separate these stages. If something went wrong during the Release .no need to deploy in production. 
+Otherwise if all 3 three stages together then it will deploy the issue image in production.
+
+VI. Processes(stateless application)
+Execute the app as one or more stateless processes. When the request hits the application. 
+Request released information should not be stored in the application (os memory or disk). I can be stored in Database. 
+Reason -in cloud microservice will be created as many instance based on the load balancer. 
+If we store request information in the application the if the micro service instance crashes..we lose the information.
+
+VII. Port binding
+Export services via port binding. Create the application as self contained application. 
+Spring boot is inclusive with web server like tomcat based on what freamwork we are adding like spring web. 
+Don’t create the application separately and package to jar or war file and deploy on web server. 
+No need of separate server for micro service. Each micro service embedded with a server and 
+a port have been binded so each micro service has direct port number.
+
+VIII. Concurrency
+Scale out via the process model in the cloud using horizontal scaling. Create the application as stateless application.
+
+IX. Disposability
+Maximize robustness with fast startup time and graceful shutdown. If instance crashes the creating new instance 
+need to start the micro service fast . and complete all the task and do graceful shutdown.
+
+X. Dev/prod parity
+Keep development, staging, and production as similar as possible mostly the configuration , databases, etc.
+
+XI. Logs
+Treat logs as event streams don’t store logs in local memory, logs stored in centralised server. 
+And display it in dashboard monitoring tool.
+
+XII. Admin processes
+Run admin/management tasks as one-off processes || application process and admin process( reports batch process, 
+database migration should be separated. Run admin process using api or script and admin process should be automated.
